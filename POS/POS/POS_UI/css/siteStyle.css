@@ -1,0 +1,8 @@
+﻿.FullLoginContainer {
+    height: 100vh;
+    width: 100%;
+    margin-right: 100px;
+    background-image: url('../images/blog.jpeg') !important; 
+    background-size: cover;
+    
+}
