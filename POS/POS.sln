@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS", "POS\POS.csproj", "{6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS-Entitiy", "POS-Entitiy\POS-Entitiy.csproj", "{021AF2B1-E9CE-4421-ACA2-6A09F6FF743E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_DATA", "POS-DATA\POS_DATA.csproj", "{AFA27919-C68D-4A4D-AEC2-24415B68FFDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_BL", "POS-BL\POS_BL.csproj", "{3EB00B9E-EF40-4CA2-9B8F-AC4FD1BABA3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{021AF2B1-E9CE-4421-ACA2-6A09F6FF743E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{021AF2B1-E9CE-4421-ACA2-6A09F6FF743E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{021AF2B1-E9CE-4421-ACA2-6A09F6FF743E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA27919-C68D-4A4D-AEC2-24415B68FFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA27919-C68D-4A4D-AEC2-24415B68FFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA27919-C68D-4A4D-AEC2-24415B68FFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA27919-C68D-4A4D-AEC2-24415B68FFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB00B9E-EF40-4CA2-9B8F-AC4FD1BABA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB00B9E-EF40-4CA2-9B8F-AC4FD1BABA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB00B9E-EF40-4CA2-9B8F-AC4FD1BABA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB00B9E-EF40-4CA2-9B8F-AC4FD1BABA3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

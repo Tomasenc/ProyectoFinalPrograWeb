@@ -4,13 +4,12 @@ use POS_Restaurant;
 
 ----------------------------------------Table Creation section----------------------------------------
 create table UserLogin (
-userID int identity (1,1),
 username varchar(10),
 pass varchar(100),
 name varchar (100),
 lastName varchar (100),
 userType int
-PRIMARY KEY (userID)
+PRIMARY KEY (username)
 );
 
 create table UserType (
@@ -20,7 +19,7 @@ PRIMARY KEY (idUserType)
 );
 
 -------------------------------------------Foreign keys-----------------------------------------------
-alter table UserLogin add foreign key (userID) references UserType(idUserType);
+alter table UserLogin add foreign key (userType) references UserType(idUserType);
 
 
 

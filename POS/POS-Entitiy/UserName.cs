@@ -7,34 +7,19 @@ namespace POS_Entitiy
 {
     public class UserName
     {
-        int idUserName;
         String username;
         String password;
         String name;
         String lastName;
         int userType;
 
-        public UserName(int idUserName, string username, string password, string name, string lastName, int userType)
+        public UserName(string username, string password, string name, string lastName, int userType)
         {
-            this.idUserName = idUserName;
             this.username = username;
             this.password = password;
             this.name = name;
             this.lastName = lastName;
             this.userType = userType;
-        }
-
-        public int IdUserName
-        {
-            get
-            {
-                return idUserName;
-            }
-
-            set
-            {
-                idUserName = value;
-            }
         }
 
         public string Username
