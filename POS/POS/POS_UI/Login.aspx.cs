@@ -13,5 +13,10 @@ namespace POS_UI
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
