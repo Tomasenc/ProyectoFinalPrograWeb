@@ -18,8 +18,6 @@
 
 </head>
 <body>
-
- 
     <div class="FullLoginContainer">
         <div class="containerLogin py-5">
             <div class="row">

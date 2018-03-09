@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace POS_UI
+namespace POS_UI.UIManager
 {
-    public partial class Gerente : System.Web.UI.MasterPage
+    public partial class AddTables : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

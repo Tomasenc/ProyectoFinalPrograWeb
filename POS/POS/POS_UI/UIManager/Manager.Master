@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Gerente.master.cs" Inherits="POS_UI.Gerente" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Manager.master.cs" Inherits="POS_UI.UIManager.Manager" %>
 
 <!DOCTYPE html>
 

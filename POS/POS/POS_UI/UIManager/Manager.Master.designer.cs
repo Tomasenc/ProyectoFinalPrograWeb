@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace POS_UI
+namespace POS_UI.UIManager
 {
 
 
-    public partial class Gerente
+    public partial class Manager
     {
 
         /// <summary>
