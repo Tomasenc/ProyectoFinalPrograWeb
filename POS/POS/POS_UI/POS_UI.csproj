@@ -111,7 +111,8 @@
     <Content Include="js\bootstrap.bundle.min.js.map" />
     <Content Include="js\bootstrap.js.map" />
     <Content Include="js\bootstrap.min.js.map" />
-    <Content Include="Gerente.Master" />
+    <Content Include="UIManager\AddTables.aspx" />
+    <Content Include="UIManager\Manager.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -133,16 +134,11 @@
     <Content Include="Login.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gerente.Master.cs">
-      <DependentUpon>Gerente.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Gerente.Master.designer.cs">
-      <DependentUpon>Gerente.Master</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,6 +147,37 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIManager\AddTables.aspx.cs">
+      <DependentUpon>AddTables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIManager\AddTables.aspx.designer.cs">
+      <DependentUpon>AddTables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIManager\Manager.Master.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIManager\Manager.Master.designer.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UIWaiter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POS_BL\POS_BL.csproj">
+      <Project>{01940e7b-f80e-47dd-a39d-ce33f0499204}</Project>
+      <Name>POS_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POS_Data\POS_Data.csproj">
+      <Project>{7e9c2a28-3c9a-49f8-a3e0-142a8d424103}</Project>
+      <Name>POS_Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POS_Entity\POS_Entity.csproj">
+      <Project>{e051fe7b-3b8a-48b0-a29b-95ec4e2fddc0}</Project>
+      <Name>POS_Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

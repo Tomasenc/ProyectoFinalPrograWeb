@@ -11,8 +11,6 @@ namespace POS_BL
     {
         UserName GetUserName(String nombreUsuario);
 
-        Boolean GetLogIn(String nombreUsuario, String Password);
-
         List<UserName> UserNameList();
 
         void AddUserName(UserName pUserName);

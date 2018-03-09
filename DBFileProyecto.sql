@@ -36,11 +36,11 @@ alter table TableNumber add foreign key (idTableStatus) references TableStatus(i
 
 
 -------------------------------------------Filling data-----------------------------------------------
-insert into UserType (description) values ('Mesero');
-insert into UserType (description) values ('Gerente');
+insert into UserType (description) values ('Waiter');
+insert into UserType (description) values ('Manager');
 
-insert into UserLogin (username, pass, name, lastName, userType) values ('Gerente', 'Gerente', 'GerenteName', 'GerenteLastName', 2);
-insert into UserLogin (username, pass, name, lastName, userType) values ('Mesero', 'Mesero', 'MeseroName', 'MeseroLastName', 1);
+insert into UserLogin (username, pass, name, lastName, userType) values ('Manager', '123', 'GerenteName', 'GerenteLastName', 2);
+insert into UserLogin (username, pass, name, lastName, userType) values ('Waiter', '123', 'MeseroName', 'MeseroLastName', 1);
 
 insert into TableStatus (description) values ('Free table');
 insert into TableStatus (description) values ('Busy table');
@@ -53,3 +53,4 @@ insert into TableNumber (idTableStatus) values (2);
 insert into TableNumber (idTableStatus) values (3);
 insert into TableNumber (idTableStatus) values (4);
 insert into TableNumber (idTableStatus) values (5);
+

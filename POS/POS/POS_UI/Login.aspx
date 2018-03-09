@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8"/>
     <title>POS-Restaurant | Login </title>
     <link href="css/bootstrap.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -31,6 +31,7 @@
                                 </div>
                                 <div class="card-body">
                                     <form class="form" role="form" autocomplete="off" id="formLogin" runat="server">
+                                         
                                         <div class="form-group">
                                             <asp:TextBox ID="txtUserName" placeholder="User name" runat="server" CssClass="form-control form-control-lg rounded-0" ControlToValidate="txtUserName"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="txtUserName" Text="*"></asp:RequiredFieldValidator>

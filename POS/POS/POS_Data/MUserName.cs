@@ -32,20 +32,6 @@ namespace POS_DATA
             return _db.Select<UserName>(x => x.Username == pUserName).FirstOrDefault();
         }
 
-        Boolean GetLogIn(String pNombreUsuario, String pPassword)
-        {
-            UserName auxUserName = this.GetUserName(pNombreUsuario);
-            if (auxUserName.Password == pPassword)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            
-        }
-
         public void ModifyUserName(UserName pUsername)
         {
             _db.Update(pUsername);
