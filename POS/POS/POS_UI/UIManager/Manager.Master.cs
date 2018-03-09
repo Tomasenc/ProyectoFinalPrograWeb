@@ -11,7 +11,14 @@ namespace POS_UI.UIManager
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["usuario"] != null)
+            {
+                this.lblUserName.Text = Session["usuario"].ToString();
+            }
+            else
+            {
+                Response.Redirect("../Login.aspx");
+            }
         }
     }
 }

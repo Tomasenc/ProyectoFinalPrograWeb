@@ -9,13 +9,13 @@ namespace POS_BL
 {
     public interface IUserName
     {
-        UserName GetUserName(String nombreUsuario);
+        UserLogin GetUserName(String nombreUsuario);
 
-        List<UserName> UserNameList();
+        List<UserLogin> UserNameList();
 
-        void AddUserName(UserName pUserName);
+        void AddUserName(UserLogin pUserName);
 
-        void ModifyUserName(UserName pUsername);
+        void ModifyUserName(UserLogin pUsername);
 
     }
 }

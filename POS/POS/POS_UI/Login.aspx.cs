@@ -16,7 +16,12 @@ namespace POS_UI
         protected void Page_Load(object sender, EventArgs e)
         {
             iUserNamelGV = new MUserName();
+            if (!IsPostBack)
+            {
+                this.lblError.Visible=false;
+            }
         }
+    
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -24,27 +29,34 @@ namespace POS_UI
             {
                 String userName = this.txtUserName.Text;
                 String userPassword = this.txtPassword.Text;
-                UserName auxUser = (UserName)iUserNamelGV.GetUserName(userName);
-                if (auxUser.Username == userName)
+
+                UserLogin auxUser = (UserLogin)iUserNamelGV.GetUserName(userName);
+
+                if (auxUser!=null)
                 {
-                    Session["usuario"] = userName;
-                    if (auxUser.UserType==0) //Waiter user
+                    if (auxUser.Pass == userPassword)
                     {
-                        Response.Redirect("/index.aspx");
+                        Session["usuario"] = userName;
+                        if (auxUser.UserType == 0) //Waiter user
+                        {
+                            Response.Redirect("/UIWaiter/index.aspx");
+                        }
+                        else // Manager user
+                        {
+                            Response.Redirect("/UIManager/AddTables.aspx");
+                        }
+
                     }
-                    else // Manager user
-                    {
-                        Response.Redirect("/UIManager/index.aspx");
-                    }
-                    
                 }
                 else
                 {
                     this.lblError.Text = "Usuario o password in correcto";
+                    this.txtUserName.CssClass = "form-control form-control-lg rounded-0 alert-danger";
+                    this.txtPassword.CssClass = "form-control form-control-lg rounded-0 alert-danger";
                     this.lblError.Visible = true;
                 }
+
             }
-        }
             catch (Exception)
             {
 

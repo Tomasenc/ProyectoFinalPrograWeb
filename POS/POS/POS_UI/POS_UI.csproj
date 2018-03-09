@@ -162,9 +162,7 @@
       <DependentUpon>Manager.Master</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UIWaiter\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\POS_BL\POS_BL.csproj">
       <Project>{01940e7b-f80e-47dd-a39d-ce33f0499204}</Project>

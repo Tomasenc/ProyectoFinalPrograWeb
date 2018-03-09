@@ -26,7 +26,8 @@ namespace POS_Data {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TEKSJOIDOL04;Initial Catalog=POS_Restaurant;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TEKSJOIDOL04;Initial Catalog=POS_Restaurant;Persist Security Info=Tru" +
+            "e;User ID=PrograUser;Password=Password15")]
         public string connection {
             get {
                 return ((string)(this["connection"]));

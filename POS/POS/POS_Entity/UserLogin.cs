@@ -5,18 +5,18 @@ using System.Web;
 
 namespace POS_Entitiy
 {
-    public class UserName
+    public class UserLogin
     {
         String username;
-        String password;
+        String pass;
         String name;
         String lastName;
         int userType;
 
-        public UserName(string username, string password, string name, string lastName, int userType)
+        public UserLogin(string username, string password, string name, string lastName, int userType)
         {
             this.username = username;
-            this.password = password;
+            this.pass = password;
             this.name = name;
             this.lastName = lastName;
             this.userType = userType;
@@ -35,16 +35,16 @@ namespace POS_Entitiy
             }
         }
 
-        public string Password
+        public string Pass
         {
             get
             {
-                return password;
+                return pass;
             }
 
             set
             {
-                password = value;
+                pass = value;
             }
         }
 

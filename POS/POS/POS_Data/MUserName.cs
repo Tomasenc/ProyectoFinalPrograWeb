@@ -22,24 +22,25 @@ namespace POS_DATA
             _db = _conexion.Open();
         }
 
-        public void AddUserName(UserName pUserName)
+        public void AddUserName(UserLogin pUserName)
         {
             _db.Insert(pUserName);
         }
 
-        public UserName GetUserName(string pUserName)
+        public UserLogin GetUserName(string pUserName)
         {
-            return _db.Select<UserName>(x => x.Username == pUserName).FirstOrDefault();
+            return _db.Select<UserLogin>(x => x.Username == pUserName).FirstOrDefault();
+
         }
 
-        public void ModifyUserName(UserName pUsername)
+        public void ModifyUserName(UserLogin pUsername)
         {
             _db.Update(pUsername);
         }
         
-        public List<UserName> UserNameList()
+        public List<UserLogin> UserNameList()
         {
-            return _db.Select<UserName>();
+            return _db.Select<UserLogin>();
         }
     }
 }
