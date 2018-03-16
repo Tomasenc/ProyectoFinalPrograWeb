@@ -36,7 +36,7 @@ namespace POS_UI
                 {
                     if (auxUser.Pass == userPassword)
                     {
-                        Session["usuario"] = userName;
+                        Session["usuario"] = auxUser.Name + " " + auxUser.LastName;
                         if (auxUser.UserType == 0) //Waiter user
                         {
                             Response.Redirect("/UIWaiter/index.aspx");

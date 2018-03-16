@@ -9,9 +9,9 @@ namespace POS_BL
 {
     public interface ITableStatus
     {
-        List<TableNumber> UserTypeList();
+        List<TableStatus> TableStatusList();
 
-        void ModifyTableStatus(TableNumber idTableStatus);
+        TableStatus GetTableStatus(int idStatus);
 
     }
 }

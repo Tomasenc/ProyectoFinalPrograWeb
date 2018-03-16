@@ -17,8 +17,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse" >
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li>
@@ -35,14 +34,12 @@
                 </li>
             </ul>
             <div class="right form-group row">
-                <ul class="nav navbar-nav ">
+                <ul class="nav navbar-nav navbar-dark bg-dark">
                     <li>
-                        <h3><asp:Label ID="lblUserName" runat="server" CssClass="mr-2" Text="Label" ></asp:Label></h3>
+                        <asp:Label ID="lblUserName" runat="server" CssClass="navbar-brand mr-2" Text="Label" ></asp:Label>
                     </li>
                     <li>
-
                         <asp:Button ID="btnLogOut" runat="server" CssClass="btn btn-outline-secondary mr-2"  Text="Log out" OnClick="btnLogOut_Click"/>
-                        
                     </li>
                 </ul>
             </div>

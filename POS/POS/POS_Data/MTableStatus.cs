@@ -21,14 +21,15 @@ namespace POS_Data
             _db = _conexion.Open();
         }
 
-        public void ModifyTableStatus(TableNumber idTableStatus)
+        public List<TableStatus> TableStatusList()
         {
-            _db.Update(idTableStatus);
+            return _db.Select<TableStatus>();
         }
 
-        public List<TableNumber> UserTypeList()
+        public TableStatus GetTableStatus(int idStatus)
         {
-            return _db.Select<TableNumber>();
+            return _db.Select<TableStatus>(x => x.idStatus == idStatus).FirstOrDefault();
         }
+
     }
 }

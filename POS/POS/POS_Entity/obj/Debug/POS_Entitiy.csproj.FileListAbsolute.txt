@@ -1,6 +1,5 @@
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Entity\bin\Debug\POS_Entity.dll
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Entity\bin\Debug\POS_Entity.pdb
-C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Entity\bin\Debug\POS_Entity.dll.CodeAnalysisLog.xml
-C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Entity\bin\Debug\POS_Entity.dll.lastcodeanalysissucceeded
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Entity\obj\Debug\POS_Entity.dll
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Entity\obj\Debug\POS_Entity.pdb
+C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Entity\obj\Debug\POS_Entitiy.csprojResolveAssemblyReference.cache
