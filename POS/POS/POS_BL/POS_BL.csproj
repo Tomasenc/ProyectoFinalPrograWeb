@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITableNumber.cs" />
+    <Compile Include="ITableStatus.cs" />
     <Compile Include="IUserName.cs" />
     <Compile Include="IUserType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,9 +70,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\POS_Entity\POS_Entity.csproj">
+    <ProjectReference Include="..\POS_Entity\POS_Entitiy.csproj">
       <Project>{e051fe7b-3b8a-48b0-a29b-95ec4e2fddc0}</Project>
-      <Name>POS_Entity</Name>
+      <Name>POS_Entitiy</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

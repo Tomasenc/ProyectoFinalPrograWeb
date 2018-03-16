@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_BL", "POS_BL\POS_BL.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_Data", "POS_Data\POS_Data.csproj", "{7E9C2A28-3C9A-49F8-A3E0-142A8D424103}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_Entity", "POS_Entity\POS_Entity.csproj", "{E051FE7B-3B8A-48B0-A29B-95EC4E2FDDC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_Entitiy", "POS_Entity\POS_Entitiy.csproj", "{E051FE7B-3B8A-48B0-A29B-95EC4E2FDDC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -65,6 +65,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>DBAccess.settings</DependentUpon>
     </Compile>
+    <Compile Include="MTableNumber.cs" />
+    <Compile Include="MTableStatus.cs" />
     <Compile Include="MUserName.cs" />
     <Compile Include="MUserType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,9 +84,9 @@
       <Project>{01940e7b-f80e-47dd-a39d-ce33f0499204}</Project>
       <Name>POS_BL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\POS_Entity\POS_Entity.csproj">
+    <ProjectReference Include="..\POS_Entity\POS_Entitiy.csproj">
       <Project>{e051fe7b-3b8a-48b0-a29b-95ec4e2fddc0}</Project>
-      <Name>POS_Entity</Name>
+      <Name>POS_Entitiy</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

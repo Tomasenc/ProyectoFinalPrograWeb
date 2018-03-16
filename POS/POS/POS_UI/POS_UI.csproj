@@ -172,9 +172,9 @@
       <Project>{7e9c2a28-3c9a-49f8-a3e0-142a8d424103}</Project>
       <Name>POS_Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\POS_Entity\POS_Entity.csproj">
+    <ProjectReference Include="..\POS_Entity\POS_Entitiy.csproj">
       <Project>{e051fe7b-3b8a-48b0-a29b-95ec4e2fddc0}</Project>
-      <Name>POS_Entity</Name>
+      <Name>POS_Entitiy</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

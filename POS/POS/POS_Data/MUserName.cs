@@ -7,9 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using POS_BL;
 using POS_Entitiy;
-using POS_Data;
 
-namespace POS_DATA
+namespace POS_Data
 {
     public class MUserName : IUserName
     {

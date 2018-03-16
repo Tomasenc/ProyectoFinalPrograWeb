@@ -7,6 +7,10 @@
         <asp:Button ID="btnAdd" CssClass="btn btn-primary" runat="server" Text="Add" />
         <asp:Button ID="btnDelete" CssClass="btn btn-primary" runat="server" Text="Delete" />
     </div>
+    <div class="container">
+        <asp:RadioButtonList ID="rbtlTableList" runat="server"></asp:RadioButtonList>
+
+    </div>
 
 </asp:Content>
 

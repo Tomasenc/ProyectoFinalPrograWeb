@@ -20,5 +20,11 @@ namespace POS_UI.UIManager
                 Response.Redirect("../Login.aspx");
             }
         }
+
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Session["usuario"] = null;
+            Response.Redirect("../Login.aspx");
+        }
     }
 }

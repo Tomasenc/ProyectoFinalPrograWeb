@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using POS_DATA;
+using POS_Data;
 using POS_BL;
 using POS_Entitiy;
 

@@ -6,9 +6,8 @@ using System.Linq;
 using System.Web;
 using POS_Entitiy;
 using POS_BL;
-using POS_Data;
 
-namespace POS_DATA
+namespace POS_Data
 {
     public class MUserType : IUserType
     {
