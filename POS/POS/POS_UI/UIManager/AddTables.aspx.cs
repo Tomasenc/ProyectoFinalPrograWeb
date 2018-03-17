@@ -27,14 +27,18 @@ namespace POS_UI.UIManager
                     rbtlTableList.DataValueField = "idTableStatus";
                     rbtlTableList.DataTextField = "idTable";
 
+
                     List<TableNumber> TL = ITableNumberGV.TableList();
                     var tableNumberList = TL.Select(x => new
                     {
-                        x.Idtable,
-                        x.IdTableStatus
+                        x.IdTableStatus,
+                        x.Idtable
                     }).ToList();
-                    rbtlTableList.DataSource = tableNumberList;
+                    rbtlTableList.DataSource = TL;
                     rbtlTableList.DataBind();
+
+                    GridView1.DataSource = tableNumberList;
+                    GridView1.DataBind();
 
                     //Fill the select (dropDown) with the Table Status created on db
 
@@ -68,12 +72,10 @@ namespace POS_UI.UIManager
 
         protected void rbtlTableList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                this.txtTableNumber.Text = this.rbtlTableList.SelectedValue.ToString();
-                this.sltTableStatus.SelectedIndex = this.rbtlTableList.SelectedIndex;
-            }
-            
+            String auxString = this.rbtlTableList.SelectedItem.Text;
+            int auxInt = Convert.ToInt32( this.rbtlTableList.SelectedValue);
+            this.txtTableNumber.Text = auxString;
+            this.sltTableStatus.SelectedIndex = auxInt;
         }
     }
 }
