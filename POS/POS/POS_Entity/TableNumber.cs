@@ -17,6 +17,10 @@ namespace POS_Entitiy
             this.IdTableStatus = idTableStatus;
         }
 
+        public TableNumber()
+        {
+        }
+
         public int Idtable
         {
             get

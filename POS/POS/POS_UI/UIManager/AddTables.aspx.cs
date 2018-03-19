@@ -15,8 +15,13 @@ namespace POS_UI.UIManager
         ITableNumber ITableNumberGV;
         ITableStatus ITableStatus;
         List<TableStatus> TS;
+        List<TableNumber> TL;
+
+        public object RtDialysisSummary { get; private set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             try
             {
                 //Load the created tables from DB
@@ -24,20 +29,16 @@ namespace POS_UI.UIManager
                 {
                     this.ITableNumberGV = new MTableNumber();
 
-                    rbtlTableList.DataValueField = "idTableStatus";
-                    rbtlTableList.DataTextField = "idTable";
+                    TL = ITableNumberGV.TableList();
+                    
+                    rbtlTableList2.DataValueField = "idTable";
+                    rbtlTableList2.DataTextField = "idTable";
 
+                    rbtlTableList2.DataSource = TL;
+                    rbtlTableList2.DataBind();
 
-                    List<TableNumber> TL = ITableNumberGV.TableList();
-                    var tableNumberList = TL.Select(x => new
-                    {
-                        x.IdTableStatus,
-                        x.Idtable
-                    }).ToList();
-                    rbtlTableList.DataSource = TL;
-                    rbtlTableList.DataBind();
-
-                    GridView1.DataSource = tableNumberList;
+                    GridView1.DataSource = TL;
+                    GridView1.AutoGenerateSelectButton = true;
                     GridView1.DataBind();
 
                     //Fill the select (dropDown) with the Table Status created on db
@@ -46,15 +47,11 @@ namespace POS_UI.UIManager
                     this.ITableStatus = new MTableStatus();
 
                     sltTableStatus.DataValueField = "description";
-                    rbtlTableList.DataTextField = "idStatus";
+                    rbtlTableList2.DataTextField = "idStatus";
 
                     this.TS = ITableStatus.TableStatusList();
-                    var tableStatusList = TS.Select(x => new
-                    {
-                        x.idStatus,
-                        x.description
-                    }).ToList();
-                    sltTableStatus.DataSource = tableStatusList;
+                    
+                    sltTableStatus.DataSource = TS;
                     sltTableStatus.DataBind();
                 }
                 
@@ -72,10 +69,57 @@ namespace POS_UI.UIManager
 
         protected void rbtlTableList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String auxString = this.rbtlTableList.SelectedItem.Text;
-            int auxInt = Convert.ToInt32( this.rbtlTableList.SelectedValue);
-            this.txtTableNumber.Text = auxString;
-            this.sltTableStatus.SelectedIndex = auxInt;
+            int auxNumTable = this.rbtlTableList2.SelectedIndex+1;
+
+            this.ITableNumberGV = new MTableNumber();
+
+            TableNumber auxTableNumber = ITableNumberGV.getTable(auxNumTable);
+
+            this.txtTableNumber.Text = auxNumTable.ToString();
+            this.sltTableStatus.SelectedIndex = auxTableNumber.IdTableStatus-1;
         }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTableNumber.Text != "Unselected table")
+                {
+                    this.ITableNumberGV = new MTableNumber();
+                    TableNumber pTable = new TableNumber(Convert.ToInt32(this.txtTableNumber.Text), this.sltTableStatus.SelectedIndex+1);
+
+                    ITableNumberGV.ModifyTable(pTable);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTableNumber.Text != "Unselected table")
+                {
+                    this.ITableNumberGV = new MTableNumber();
+                    TableNumber pTable = new TableNumber();
+                    pTable.IdTableStatus = 1; //Free status 
+
+                    ITableNumberGV.addTable(pTable);
+                    Response.Redirect("Addtables.aspx");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        
     }
 }

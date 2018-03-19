@@ -22,9 +22,9 @@ namespace POS_Data
             _db = _conexion.Open();
         }
 
-        public void addTable(TableNumber idTableStatus)
+        public void addTable(TableNumber pTableNumber)
         {
-            _db.Insert(idTableStatus);
+            _db.InsertOnly<TableNumber>(new TableNumber { IdTableStatus = pTableNumber.IdTableStatus },p => p.IdTableStatus);
         }
 
         public TableNumber getTable(int idTable)
