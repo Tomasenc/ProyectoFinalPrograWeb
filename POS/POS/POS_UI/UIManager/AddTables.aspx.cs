@@ -37,9 +37,7 @@ namespace POS_UI.UIManager
                     rbtlTableList2.DataSource = TL;
                     rbtlTableList2.DataBind();
 
-                    GridView1.DataSource = TL;
-                    GridView1.AutoGenerateSelectButton = true;
-                    GridView1.DataBind();
+                    
 
                     //Fill the select (dropDown) with the Table Status created on db
 
