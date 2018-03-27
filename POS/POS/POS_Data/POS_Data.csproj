@@ -65,6 +65,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>DBAccess.settings</DependentUpon>
     </Compile>
+    <Compile Include="MProduct.cs" />
+    <Compile Include="MProductCategory.cs" />
     <Compile Include="MTableNumber.cs" />
     <Compile Include="MTableStatus.cs" />
     <Compile Include="MUserName.cs" />

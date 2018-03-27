@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IProduct.cs" />
+    <Compile Include="IProductCategory.cs" />
     <Compile Include="ITableNumber.cs" />
     <Compile Include="ITableStatus.cs" />
     <Compile Include="IUserName.cs" />
