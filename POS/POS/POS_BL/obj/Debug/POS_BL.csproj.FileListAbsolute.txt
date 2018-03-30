@@ -15,3 +15,5 @@ C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_BL\bin\Debug\ServiceStack.OrmL
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_BL\bin\Debug\ServiceStack.Text.xml
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_BL\obj\Debug\POS_BL.dll
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_BL\obj\Debug\POS_BL.pdb
+C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_BL\obj\Debug\POS_BL.csproj.CoreCompileInputs.cache
+C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_BL\obj\Debug\POS_BL.csproj.CopyComplete

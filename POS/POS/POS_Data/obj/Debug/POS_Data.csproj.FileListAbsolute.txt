@@ -18,3 +18,5 @@ C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Data\bin\Debug\ServiceStack.Te
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Data\obj\Debug\POS_Data.csprojResolveAssemblyReference.cache
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Data\obj\Debug\POS_Data.dll
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Data\obj\Debug\POS_Data.pdb
+C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Data\obj\Debug\POS_Data.csproj.CoreCompileInputs.cache
+C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_Data\obj\Debug\POS_Data.csproj.CopyComplete
