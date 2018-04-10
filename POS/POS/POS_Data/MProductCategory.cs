@@ -21,7 +21,7 @@ namespace POS_Data
             _db = _conexion.Open();
         }
 
-        public List<ProductCategory> UserTypeList()
+        public List<ProductCategory> ProducCategoryList()
         {
             return _db.Select<ProductCategory>();
         }

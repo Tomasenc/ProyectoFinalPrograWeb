@@ -9,6 +9,6 @@ namespace POS_BL
 {
     public interface IProductCategory
     {
-        List<ProductCategory> UserTypeList();
+        List<ProductCategory> ProducCategoryList();
     }
 }
