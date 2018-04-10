@@ -51,7 +51,7 @@ primary key (idProduct)
 -------------------------------------------Foreign keys-----------------------------------------------
 alter table UserLogin add foreign key (userType) references UserType(idUserType);
 alter table TableNumber add foreign key (idTableStatus) references TableStatus(idStatus);
-alter table Product add foreign key (idProducCategory) references ProductCategory(idProducCategory);
+alter table Product add foreign key (idProductCategory) references ProductCategory(idProductCategory);
 
 
 -------------------------------------------Filling data-----------------------------------------------

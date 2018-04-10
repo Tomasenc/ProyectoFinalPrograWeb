@@ -47,3 +47,6 @@ C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_UI\bin\ServiceStack.OrmLite.Sq
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_UI\bin\ServiceStack.Common.xml
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_UI\bin\ServiceStack.Interfaces.xml
 C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_UI\bin\ServiceStack.Text.xml
+C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_UI\bin\POS_Data.dll.config
+C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_UI\obj\Debug\POS_UI.csproj.CoreCompileInputs.cache
+C:\U\PrograWeb\ProyectoFinalPrograWeb\POS\POS\POS_UI\obj\Debug\POS_UI.csproj.CopyComplete

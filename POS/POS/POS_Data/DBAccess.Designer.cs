@@ -12,7 +12,7 @@ namespace POS_Data {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.6.0.0")]
     internal sealed partial class DBAccess : global::System.Configuration.ApplicationSettingsBase {
         
         private static DBAccess defaultInstance = ((DBAccess)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new DBAccess())));
@@ -26,8 +26,8 @@ namespace POS_Data {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TEKSJOIDOL04;Initial Catalog=POS_Restaurant;Persist Security Info=Tru" +
-            "e;User ID=PrograUser;Password=Password15")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=POS_Restaurant;Persist Security Info=True;U" +
+            "ser ID=PrograUser;Password=Password15")]
         public string connection {
             get {
                 return ((string)(this["connection"]));
