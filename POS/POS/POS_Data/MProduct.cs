@@ -30,12 +30,18 @@ namespace POS_Data
 
         public Product getProduct(int idProduct)
         {
-            return _db.Select<Product>(x => x.IdProduct == idProduct).FirstOrDefault();
+            return _db.Select<Product>("select * from Product where idProduct = "+idProduct).FirstOrDefault();
         }
 
         public void ModifyProduct(Product pProduct)
         {
-            _db.Update(pProduct);
+            //_db.UpdateAdd<Product>("update Product set productDescription = '" + pProduct.ProductDescription + "', idProductCategory = " + pProduct.IdProductCategory + ", productStatus = " + pProduct.ProductStatus + " WHERE idProduct = " + pProduct.IdProduct);
+            //_db.Update<Product>( new Product { ProductDescription = pProduct.ProductDescription, IdProductCategory = pProduct.IdProductCategory, ProductStatus = pProduct.ProductStatus }, p => p.IdProduct == pProduct.IdProduct);
+            //("update Product set productDescription = '" + pProduct.ProductDescription + "', idProductCategory = " + pProduct.IdProductCategory.ToString() + ", productStatus = " + pProduct.ProductStatus.ToString() + " WHERE idProduct = " + pProduct.IdProduct.ToString());
+            pProduct.IdProductCategory = pProduct.IdProductCategory + 1; // to prevent any changes on the idProductCategory
+            _db.ExecuteSql("update Product set productDescription = '" + pProduct.ProductDescription + "', idProductCategory = " + pProduct.IdProductCategory.ToString() + ", productStatus = " + pProduct.ProductStatus.ToString() + " WHERE idProduct = " + pProduct.IdProduct.ToString());
+
+
         }
 
         public List<Product> ProductList()

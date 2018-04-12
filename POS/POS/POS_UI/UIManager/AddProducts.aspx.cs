@@ -71,7 +71,7 @@ namespace POS_UI.UIManager
 
             this.txtIdProduct.Text = auxProduct.IdProduct.ToString();
             this.txtDecription.Text = auxProduct.ProductDescription;
-            this.stlCategory.SelectedIndex = auxProduct.IdProductCategory;
+            this.stlCategory.SelectedIndex = auxProduct.IdProductCategory-1;
             this.ddlStatus.SelectedIndex = auxProduct.ProductStatus;
         }
 
