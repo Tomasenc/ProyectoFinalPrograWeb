@@ -35,15 +35,15 @@ primary key (idStatus)
 
 create table ProductCategory (
 idProductCategory int identity (1,1) not null,
-description varchar (30) not null
+productCategoryDescription varchar (30) not null
 primary key (idProductCategory)
 );
 
 create table Product (
 idProduct int identity (1,1) not null,
-description varchar (30) not null,
+productDescription varchar (30) not null,
 idProductCategory int not null,
-productStatus int not null
+productStatus varchar (10) not null
 primary key (idProduct)
 );
 
@@ -52,6 +52,7 @@ primary key (idProduct)
 alter table UserLogin add foreign key (userType) references UserType(idUserType);
 alter table TableNumber add foreign key (idTableStatus) references TableStatus(idStatus);
 alter table Product add foreign key (idProductCategory) references ProductCategory(idProductCategory);
+
 
 
 -------------------------------------------Filling data-----------------------------------------------

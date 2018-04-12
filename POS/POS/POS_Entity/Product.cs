@@ -9,13 +9,14 @@ namespace POS_Entitiy
     public class Product
     {
         int idProduct;
-        String description;
+        String productDescription;
         int idProductCategory;
         int productStatus;
+        String productCategoryDescription;
 
         public Product( string description, int idProductCategory, int productStatus)
         {
-            this.description = description;
+            this.productDescription = description;
             this.idProductCategory = idProductCategory;
             this.productStatus = productStatus;
         }
@@ -39,16 +40,16 @@ namespace POS_Entitiy
             }
         }
 
-        public string Description
+        public string ProductDescription
         {
             get
             {
-                return description;
+                return productDescription;
             }
 
             set
             {
-                description = value;
+                productDescription = value;
             }
         }
 
@@ -75,6 +76,19 @@ namespace POS_Entitiy
             set
             {
                 productStatus = value;
+            }
+        }
+
+        public string ProductCategoryDescription
+        {
+            get
+            {
+                return productCategoryDescription;
+            }
+
+            set
+            {
+                productCategoryDescription = value;
             }
         }
     }

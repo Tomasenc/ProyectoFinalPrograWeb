@@ -21,25 +21,25 @@ namespace POS_UI.UIManager
                 //Load the created tables from DB
                 if (!IsPostBack)
                 {
-                    this.IProducGV = new MProduct();
-
-                    List<Product> PL = IProducGV.ProductList();
-
-                    this.dgvProducts.DataSource = PL;
-                    this.dgvProducts.DataBind();
+                    LoadDataGridView();
                     
                     //Fill the select (dropDown) with the Table Status created on db
 
 
-                    /*this.ITableStatus = new MTableStatus();
+                    this.IProductCategoryGV = new MProductCategory();
 
-                    sltTableStatus.DataValueField = "description";
-                    rbtlTableList2.DataTextField = "idStatus";
+                    stlCategory.DataValueField = "idProductCategory";
+                    stlCategory.DataTextField = "productCategoryDescription";
 
-                    this.TS = ITableStatus.TableStatusList();
+                    List<ProductCategory> TS = IProductCategoryGV.ProductCategoryList();
 
-                    sltTableStatus.DataSource = TS;
-                    sltTableStatus.DataBind();*/
+                    stlCategory.DataSource = TS;
+                    stlCategory.DataBind();
+
+
+                    //Fill the select Status
+
+                    
                 }
 
 
@@ -50,6 +50,57 @@ namespace POS_UI.UIManager
 
                 throw;
             }
+        }
+
+        protected void LoadDataGridView()
+        {
+            this.IProducGV = new MProduct();
+
+            List<Product> PL = IProducGV.ProductList();
+
+            this.dgvProducts.DataSource = PL;
+            this.dgvProducts.DataBind();
+        }
+
+        protected void dgvProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int productID = Convert.ToInt32(this.dgvProducts.SelectedDataKey.Value.ToString());
+            this.IProducGV = new MProduct();
+
+            Product auxProduct = IProducGV.getProduct(productID);
+
+            this.txtIdProduct.Text = auxProduct.IdProduct.ToString();
+            this.txtDecription.Text = auxProduct.ProductDescription;
+            this.stlCategory.SelectedIndex = auxProduct.IdProductCategory;
+            this.ddlStatus.SelectedIndex = auxProduct.ProductStatus;
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            this.IProducGV = new MProduct();
+
+            Product auxProduct = new Product();
+
+            auxProduct.IdProduct = Convert.ToInt32(this.txtIdProduct.Text);
+            auxProduct.ProductDescription = this.txtDecription.Text;
+            auxProduct.IdProductCategory = Convert.ToInt32(this.stlCategory.SelectedIndex);
+            auxProduct.ProductStatus = Convert.ToInt32(this.ddlStatus.SelectedIndex);
+
+            IProducGV.ModifyProduct(auxProduct);
+            this.LoadDataGridView();
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            this.IProducGV = new MProduct();
+            Product auxProduct = new Product();
+
+            auxProduct.ProductDescription = this.txtDecription.Text;
+            auxProduct.IdProductCategory = Convert.ToInt32(this.stlCategory.SelectedIndex);
+            auxProduct.ProductStatus = Convert.ToInt32(this.ddlStatus.SelectedIndex);
+
+            IProducGV.addProduct(auxProduct);
+            this.LoadDataGridView();
         }
     }
 }

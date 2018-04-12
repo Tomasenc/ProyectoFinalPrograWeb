@@ -9,12 +9,12 @@ namespace POS_BL
 {
     public interface IProduct
     {
-        Product getTable(int idProduct);
+        Product getProduct(int idProduct);
 
         List<Product> ProductList();
 
-        void addTable(Product pProduct);
+        void addProduct(Product pProduct);
 
-        void ModifyTable(Product pProduct);
+        void ModifyProduct(Product pProduct);
     }
 }

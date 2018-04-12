@@ -18,8 +18,7 @@
         </div>  
     </div>
     <hr />
-    <div class="container mt-3">
-        <asp:GridView ID="GridView1" runat="server" ></asp:GridView>
+    <div class="containerTable mt-3">
         
         <asp:RadioButtonList ID="rbtlTableList2" runat="server" OnSelectedIndexChanged="rbtlTableList_SelectedIndexChanged" AutoPostBack="True" Width="100%" RepeatLayout="OrderedList" ></asp:RadioButtonList>
         

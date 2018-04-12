@@ -45,7 +45,7 @@ namespace POS_UI.UIManager
                     this.ITableStatus = new MTableStatus();
 
                     sltTableStatus.DataValueField = "description";
-                    rbtlTableList2.DataTextField = "idStatus";
+                    sltTableStatus.DataTextField = "idStatus";
 
                     this.TS = ITableStatus.TableStatusList();
                     

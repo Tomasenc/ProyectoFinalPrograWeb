@@ -13,22 +13,22 @@ namespace POS_UI.UIManager {
     public partial class AddProducts {
         
         /// <summary>
-        /// txtTableNumber control.
+        /// txtIdProduct control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTableNumber;
+        protected global::System.Web.UI.WebControls.TextBox txtIdProduct;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtDecription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtDecription;
         
         /// <summary>
         /// stlCategory control.
@@ -38,6 +38,15 @@ namespace POS_UI.UIManager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlSelect stlCategory;
+        
+        /// <summary>
+        /// ddlStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
         
         /// <summary>
         /// btnUpdate control.

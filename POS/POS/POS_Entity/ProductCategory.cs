@@ -8,40 +8,44 @@ namespace POS_Entitiy
 {
     public class ProductCategory
     {
-        int idProducCategory;
-        String descrition;
+        int idProductCategory;
+        String productCategoryDescription;
 
-        public ProductCategory(int idProducCategory, string descrition)
+        public ProductCategory(int idProductCategory, string descrition)
         {
-            this.IdProducCategory = idProducCategory;
-            this.Descrition = descrition;
+            this.IdProductCategory = idProductCategory;
+            this.productCategoryDescription = descrition;
         }
 
-        public int IdProducCategory
+        public int IdProductCategory
         {
             get
             {
-                return idProducCategory;
+                return idProductCategory;
             }
 
             set
             {
-                idProducCategory = value;
+                idProductCategory = value;
             }
         }
 
-        public string Descrition
+        public string ProductCategoryDescription
         {
             get
             {
-                return descrition;
+                return productCategoryDescription;
             }
 
             set
             {
-                descrition = value;
+                productCategoryDescription = value;
             }
         }
+
+       
+
+        
 
         
     }

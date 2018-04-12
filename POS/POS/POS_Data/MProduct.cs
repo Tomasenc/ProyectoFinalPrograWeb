@@ -21,25 +21,26 @@ namespace POS_Data
             _db = _conexion.Open();
         }
 
-        public void addTable(Product pProduct)
+        public void addProduct(Product pProduct)
         {
-            _db.InsertOnly<Product>(new Product { Description = pProduct.Description, IdProductCategory = pProduct.IdProductCategory,
-                                        ProductStatus = pProduct.ProductStatus }, p => new { p.Description, p.IdProductCategory, p.ProductStatus });
+            _db.InsertOnly<Product>(new Product {
+                ProductDescription = pProduct.ProductDescription, IdProductCategory = pProduct.IdProductCategory,
+                                        ProductStatus = pProduct.ProductStatus }, p => new { p.ProductDescription, p.IdProductCategory, p.ProductStatus });
         }
 
-        public Product getTable(int idProduct)
+        public Product getProduct(int idProduct)
         {
             return _db.Select<Product>(x => x.IdProduct == idProduct).FirstOrDefault();
         }
 
-        public void ModifyTable(Product pProduct)
+        public void ModifyProduct(Product pProduct)
         {
             _db.Update(pProduct);
         }
 
         public List<Product> ProductList()
         {
-            return _db.Select<Product>();
+            return _db.Select<Product>("select Product.idProduct, Product.productDescription, ProductCategory.productCategoryDescription, Product.productStatus from Product inner join ProductCategory on ProductCategory.idProductCategory = Product.idProductCategory");
         }
     }
 }
