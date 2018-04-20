@@ -136,6 +136,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="UIManager\AddProducts.aspx" />
+    <Content Include="UIManager\RegistrarCommanda.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -169,6 +170,13 @@
     </Compile>
     <Compile Include="UIManager\AddProducts.aspx.designer.cs">
       <DependentUpon>AddProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIManager\RegistrarCommanda.aspx.cs">
+      <DependentUpon>RegistrarCommanda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIManager\RegistrarCommanda.aspx.designer.cs">
+      <DependentUpon>RegistrarCommanda.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

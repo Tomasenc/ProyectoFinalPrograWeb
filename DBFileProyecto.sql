@@ -1,4 +1,4 @@
-CREATE DATABASE POS_Restaurant;
+	CREATE DATABASE POS_Restaurant;
 
 use POS_Restaurant;
 
@@ -47,12 +47,35 @@ productStatus varchar (10) not null
 primary key (idProduct)
 );
 
+create table ServiceOrderStatus (
+idServiceOrderStatus int identity (1,1) not null,
+ServiceOrderDescription varchar (30) not null,
+primary key (idServiceOrderStatus)
+);
+
+create table ServiceOrder (
+idServiceOrder int identity (1,1) not null,
+idUserLogin varchar(10) not null,
+idTableNumber int not null,
+primary key (idServiceOrder)
+);
+
+create table ServiceOrderDetails (
+idServiceOrderDetails int identity (1,1) not null,
+idServiceOrder int not null,
+idProduct int not null,
+serviceOrderNotes varchar (100) not null
+primary key (idServiceOrderDetails)
+);
 
 -------------------------------------------Foreign keys-----------------------------------------------
 alter table UserLogin add foreign key (userType) references UserType(idUserType);
 alter table TableNumber add foreign key (idTableStatus) references TableStatus(idStatus);
 alter table Product add foreign key (idProductCategory) references ProductCategory(idProductCategory);
-
+alter table ServiceOrder add foreign key (idUserLogin) references UserLogin(username);
+alter table ServiceOrder add foreign key (idTableNumber) references TableNumber(idTable);
+alter table ServiceOrderDetails add foreign key (idServiceOrder) references ServiceOrder(idServiceOrder);
+alter table ServiceOrderDetails add foreign key (idProduct) references Product(idProduct);
 
 
 -------------------------------------------Filling data-----------------------------------------------
@@ -111,3 +134,25 @@ insert into Product (productDescription,idProductCategory,productStatus) values 
 insert into Product (productDescription,idProductCategory,productStatus) values ('Icre Cream',7,1); --Dessert
 insert into Product (productDescription,idProductCategory,productStatus) values ('Fuid Salad',7,1); --Dessert
 insert into Product (productDescription,idProductCategory,productStatus) values ('Flan',7,1); --Dessert
+
+insert into ServiceOrderStatus (ServiceOrderDescription) values ('Registered'); 
+insert into ServiceOrderStatus (ServiceOrderDescription) values ('In process'); 
+insert into ServiceOrderStatus (ServiceOrderDescription) values ('Pending'); 
+insert into ServiceOrderStatus (ServiceOrderDescription) values ('Delivered'); 
+insert into ServiceOrderStatus (ServiceOrderDescription) values ('Finished');
+
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 1); 
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 2); 
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 3); 
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 4); 
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 5);
+
+insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (1, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (1, 2, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (1, 3, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (2, 4, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (2, 5, 'This is a test');
+insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (2, 6, 'This is a test');
+insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (3, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (4, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (5, 1, 'This is a test'); 
