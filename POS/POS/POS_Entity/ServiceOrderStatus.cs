@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POS_Entity
+namespace POS_Entitiy
 {
     public class ServiceOrderStatus
     {

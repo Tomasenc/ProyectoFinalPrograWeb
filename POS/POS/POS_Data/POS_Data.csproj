@@ -67,6 +67,9 @@
     </Compile>
     <Compile Include="MProduct.cs" />
     <Compile Include="MProductCategory.cs" />
+    <Compile Include="MServiceOrder.cs" />
+    <Compile Include="MServiceOrderDetails.cs" />
+    <Compile Include="MServiceOrderStatus.cs" />
     <Compile Include="MTableNumber.cs" />
     <Compile Include="MTableStatus.cs" />
     <Compile Include="MUserName.cs" />
