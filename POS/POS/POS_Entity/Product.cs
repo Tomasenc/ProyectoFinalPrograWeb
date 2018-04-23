@@ -13,12 +13,14 @@ namespace POS_Entitiy
         int idProductCategory;
         int productStatus;
         String productCategoryDescription;
+        decimal productPrice;
 
-        public Product( string description, int idProductCategory, int productStatus)
+        public Product( string description, int idProductCategory, int productStatus, decimal productPrice)
         {
             this.productDescription = description;
             this.idProductCategory = idProductCategory;
             this.productStatus = productStatus;
+            this.productPrice = productPrice;
         }
 
         public Product()
@@ -89,6 +91,19 @@ namespace POS_Entitiy
             set
             {
                 productCategoryDescription = value;
+            }
+        }
+
+        public decimal ProductPrice
+        {
+            get
+            {
+                return productPrice;
+            }
+
+            set
+            {
+                productPrice = value;
             }
         }
     }

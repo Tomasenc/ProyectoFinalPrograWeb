@@ -11,17 +11,19 @@ namespace POS_Entitiy
         int idServiceOrder;
         String idUserLogin;
         int idTableNumber;
+        int idServiceOrderStatus;
 
         public ServiceOrder()
         {
 
         }
 
-        public ServiceOrder(int idServiceOrder, string idUserLogin, int idTableNumber)
+        public ServiceOrder(int idServiceOrder, string idUserLogin, int idTableNumber, int idServiceOrderStatus)
         {
             this.IdServiceOrder = idServiceOrder;
             this.IdUserLogin = idUserLogin;
             this.IdTableNumber = idTableNumber;
+            this.IdServiceOrderStatus = idServiceOrderStatus;
         }
 
         public int IdServiceOrder
@@ -63,11 +65,17 @@ namespace POS_Entitiy
             }
         }
 
-        public ServiceOrder(int idServiceOrder, string idUserLogin, int idTableNumber)
+        public int IdServiceOrderStatus
         {
-            this.IdServiceOrder = idServiceOrder;
-            this.IdUserLogin = idUserLogin;
-            this.IdTableNumber = idTableNumber;
+            get
+            {
+                return idServiceOrderStatus;
+            }
+
+            set
+            {
+                idServiceOrderStatus = value;
+            }
         }
     }
 }

@@ -112,6 +112,7 @@
     <Content Include="js\bootstrap.bundle.min.js.map" />
     <Content Include="js\bootstrap.js.map" />
     <Content Include="js\bootstrap.min.js.map" />
+    <Content Include="UIManager\DetailServiceOrder.aspx" />
     <Content Include="UIManager\AddTables.aspx" />
     <Content Include="UIManager\Manager.Master" />
     <None Include="Web.Debug.config">
@@ -136,7 +137,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="UIManager\AddProducts.aspx" />
-    <Content Include="UIManager\RegistrarCommanda.aspx" />
+    <Content Include="UIManager\ListServiceOrder.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -150,6 +151,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIManager\DetailServiceOrder.aspx.cs">
+      <DependentUpon>DetailServiceOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIManager\DetailServiceOrder.aspx.designer.cs">
+      <DependentUpon>DetailServiceOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UIManager\AddTables.aspx.cs">
       <DependentUpon>AddTables.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,12 +179,12 @@
     <Compile Include="UIManager\AddProducts.aspx.designer.cs">
       <DependentUpon>AddProducts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UIManager\RegistrarCommanda.aspx.cs">
-      <DependentUpon>RegistrarCommanda.aspx</DependentUpon>
+    <Compile Include="UIManager\ListServiceOrder.aspx.cs">
+      <DependentUpon>ListServiceOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UIManager\RegistrarCommanda.aspx.designer.cs">
-      <DependentUpon>RegistrarCommanda.aspx</DependentUpon>
+    <Compile Include="UIManager\ListServiceOrder.aspx.designer.cs">
+      <DependentUpon>ListServiceOrder.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

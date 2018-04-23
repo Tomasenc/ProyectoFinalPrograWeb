@@ -25,7 +25,7 @@ namespace POS_Data
         {
             _db.InsertOnly<Product>(new Product {
                 ProductDescription = pProduct.ProductDescription, IdProductCategory = pProduct.IdProductCategory,
-                                        ProductStatus = pProduct.ProductStatus }, p => new { p.ProductDescription, p.IdProductCategory, p.ProductStatus });
+                                        ProductStatus = pProduct.ProductStatus, ProductPrice = pProduct.ProductPrice }, p => new { p.ProductDescription, p.IdProductCategory, p.ProductStatus, p.ProductPrice });
         }
 
         public Product getProduct(int idProduct)
@@ -35,12 +35,12 @@ namespace POS_Data
 
         public void ModifyProduct(Product pProduct)
         {
-            _db.ExecuteSql("update Product set productDescription = '" + pProduct.ProductDescription + "', idProductCategory = " + pProduct.IdProductCategory.ToString() + ", productStatus = " + pProduct.ProductStatus.ToString() + " WHERE idProduct = " + pProduct.IdProduct.ToString());
+            _db.ExecuteSql("update Product set productDescription = '" + pProduct.ProductDescription + "', idProductCategory = " + pProduct.IdProductCategory.ToString() + ", productStatus = " + pProduct.ProductStatus.ToString() + ", productPrice = " + pProduct.ProductPrice + " WHERE idProduct = " + pProduct.IdProduct.ToString());
         }
 
         public List<Product> ProductList()
         {
-            return _db.Select<Product>("select Product.idProduct, Product.productDescription, ProductCategory.productCategoryDescription, Product.productStatus from Product inner join ProductCategory on ProductCategory.idProductCategory = Product.idProductCategory");
+            return _db.Select<Product>("select Product.idProduct, Product.productDescription, ProductCategory.productCategoryDescription, Product.productStatus, Product.productPrice from Product inner join ProductCategory on ProductCategory.idProductCategory = Product.idProductCategory");
         }
     }
 }

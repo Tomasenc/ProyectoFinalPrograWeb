@@ -43,7 +43,8 @@ create table Product (
 idProduct int identity (1,1) not null,
 productDescription varchar (30) not null,
 idProductCategory int not null,
-productStatus varchar (10) not null
+productStatus varchar (10) not null,
+productPrice decimal(18,0) not null
 primary key (idProduct)
 );
 
@@ -57,6 +58,8 @@ create table ServiceOrder (
 idServiceOrder int identity (1,1) not null,
 idUserLogin varchar(10) not null,
 idTableNumber int not null,
+idServiceOrderStatus int not null,
+total decimal(18,1) not null
 primary key (idServiceOrder)
 );
 
@@ -74,6 +77,7 @@ alter table TableNumber add foreign key (idTableStatus) references TableStatus(i
 alter table Product add foreign key (idProductCategory) references ProductCategory(idProductCategory);
 alter table ServiceOrder add foreign key (idUserLogin) references UserLogin(username);
 alter table ServiceOrder add foreign key (idTableNumber) references TableNumber(idTable);
+alter table ServiceOrder add foreign key (idServiceOrderStatus) references ServiceOrderStatus(idServiceOrderStatus);
 alter table ServiceOrderDetails add foreign key (idServiceOrder) references ServiceOrder(idServiceOrder);
 alter table ServiceOrderDetails add foreign key (idProduct) references Product(idProduct);
 
