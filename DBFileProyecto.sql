@@ -1,4 +1,4 @@
-	CREATE DATABASE POS_Restaurant;
+CREATE DATABASE POS_Restaurant;
 
 use POS_Restaurant;
 
@@ -35,7 +35,7 @@ primary key (idStatus)
 
 create table ProductCategory (
 idProductCategory int identity (1,1) not null,
-productCategoryDescription varchar (30) not null
+productCategoryDescription varchar (30) not null,
 productPrice decimal (18,0) not null
 primary key (idProductCategory)
 );
@@ -68,9 +68,12 @@ create table ServiceOrderDetails (
 idServiceOrderDetails int identity (1,1) not null,
 idServiceOrder int not null,
 idProduct int not null,
-serviceOrderNotes varchar (100) not null
+quantity int not null,
+total int not null,
+serviceOrderNotes varchar (100) not null,
 primary key (idServiceOrderDetails)
 );
+
 
 -------------------------------------------Foreign keys-----------------------------------------------
 alter table UserLogin add foreign key (userType) references UserType(idUserType);
@@ -146,18 +149,19 @@ insert into ServiceOrderStatus (ServiceOrderDescription) values ('Pending');
 insert into ServiceOrderStatus (ServiceOrderDescription) values ('Delivered'); 
 insert into ServiceOrderStatus (ServiceOrderDescription) values ('Finished');
 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 1, 3200); 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 2, 1600); 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 3, 2000); 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 4, 2000); 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 5, 2000);
+insert into ServiceOrder (idUserLogin, idTableNumber, idServiceOrderStatus, total) values ('manager', 1, 1, 200); 
+insert into ServiceOrder (idUserLogin, idTableNumber, idServiceOrderStatus, total) values ('manager', 2, 1, 200); 
+insert into ServiceOrder (idUserLogin, idTableNumber, idServiceOrderStatus, total) values ('manager', 3, 1, 200); 
+insert into ServiceOrder (idUserLogin, idTableNumber, idServiceOrderStatus, total) values ('manager', 4, 1, 200); 
+insert into ServiceOrder (idUserLogin, idTableNumber, idServiceOrderStatus, total) values ('manager', 5, 1, 200);
 
-insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (1, 1, 'This is a test'); 
-insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (1, 2, 'This is a test'); 
-insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (1, 3, 'This is a test'); 
-insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (2, 4, 'This is a test'); 
-insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (2, 5, 'This is a test');
-insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (2, 6, 'This is a test');
-insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (3, 1, 'This is a test'); 
-insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (4, 1, 'This is a test'); 
-insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (5, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, quantity, total, serviceOrderNotes) values (1, 1, 1, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, quantity, total, serviceOrderNotes) values (1, 2, 1, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, quantity, total, serviceOrderNotes) values (1, 3, 1, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, quantity, total, serviceOrderNotes) values (2, 4, 1, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, quantity, total, serviceOrderNotes) values (2, 5, 1, 1, 'This is a test');
+insert into ServiceOrderDetails (idServiceOrder, idProduct, quantity, total, serviceOrderNotes) values (2, 6, 1, 1, 'This is a test');
+insert into ServiceOrderDetails (idServiceOrder, idProduct, quantity, total, serviceOrderNotes) values (3, 1, 1, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, quantity, total, serviceOrderNotes) values (4, 1, 1, 1, 'This is a test'); 
+insert into ServiceOrderDetails (idServiceOrder, idProduct, quantity, total, serviceOrderNotes) values (5, 1, 1, 1, 'This is a test'); 
+

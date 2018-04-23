@@ -17,7 +17,7 @@ namespace POS_UI.UIManager
         {
             try
             {
-                int detailServiceOrder = Convert.ToInt32(Request.QueryString["DetailServiceOrder"]);
+                int detailServiceOrder = Convert.ToInt32(Request.QueryString["idServiceOrder"]);
                 if (!IsPostBack)
                 {
                     this.ISDGV = new MServiceOrderDetails();
