@@ -11,14 +11,23 @@ namespace POS_Entitiy
         int idServiceOrderDetails;
         int idServiceOrder;
         int idProduct;
+        int quantity;
+        decimal total;
         String serviceOrderNotes;
 
-        public ServiceOrderDetails(int idServiceOrderDetails, int idServiceOrder, int idProduct, string serviceOrderNotes)
+        public ServiceOrderDetails(int idServiceOrderDetails, int idServiceOrder, int idProduct, string serviceOrderNotes, int quantity, decimal total)
         {
             this.idServiceOrderDetails = idServiceOrderDetails;
             this.idServiceOrder = idServiceOrder;
             this.idProduct = idProduct;
             this.serviceOrderNotes = serviceOrderNotes;
+            this.Quantity = quantity;
+            this.Total = total;
+        }
+
+        public ServiceOrderDetails()
+        {
+            
         }
 
         public int IdServiceOrderDetails
@@ -70,6 +79,32 @@ namespace POS_Entitiy
             set
             {
                 serviceOrderNotes = value;
+            }
+        }
+
+        public int Quantity
+        {
+            get
+            {
+                return quantity;
+            }
+
+            set
+            {
+                quantity = value;
+            }
+        }
+
+        public decimal Total
+        {
+            get
+            {
+                return total;
+            }
+
+            set
+            {
+                total = value;
             }
         }
     }

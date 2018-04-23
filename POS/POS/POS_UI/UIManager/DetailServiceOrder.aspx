@@ -26,8 +26,8 @@
         <asp:GridView ID="dgvServiceOrderDetails" runat="server" Width="100%" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False" DataKeyNames="idProduct" EmptyDataText="There are no data records to display." AutoGenerateSelectButton="True">  
             <Columns>  
                 <asp:BoundField DataField="idProduct" HeaderText="ID" ReadOnly="True" />  
-                <asp:BoundField DataField="productPrice" HeaderText="Price" HeaderStyle-CssClass="visible-md" ItemStyle-CssClass="visible-md" />  
-                <asp:BoundField DataField="productStatus" HeaderText="Status" HeaderStyle-CssClass="visible-md" ItemStyle-CssClass="visible-md" />  
+                <asp:BoundField DataField="quantity" HeaderText="Price" HeaderStyle-CssClass="visible-md" ItemStyle-CssClass="visible-md" />  
+                <asp:BoundField DataField="Total" HeaderText="Status" HeaderStyle-CssClass="visible-md" ItemStyle-CssClass="visible-md" />  
                 <asp:BoundField DataField="serviceOrderNotes" HeaderText="Notes" HeaderStyle-CssClass="visible-lg" ItemStyle-CssClass="visible-lg" />  
             </Columns>  
         </asp:GridView>  

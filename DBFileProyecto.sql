@@ -36,7 +36,6 @@ primary key (idStatus)
 create table ProductCategory (
 idProductCategory int identity (1,1) not null,
 productCategoryDescription varchar (30) not null,
-productPrice decimal (18,0) not null
 primary key (idProductCategory)
 );
 
