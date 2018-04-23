@@ -36,6 +36,7 @@ primary key (idStatus)
 create table ProductCategory (
 idProductCategory int identity (1,1) not null,
 productCategoryDescription varchar (30) not null
+productPrice decimal (18,0) not null
 primary key (idProductCategory)
 );
 
@@ -59,7 +60,7 @@ idServiceOrder int identity (1,1) not null,
 idUserLogin varchar(10) not null,
 idTableNumber int not null,
 idServiceOrderStatus int not null,
-total decimal(18,1) not null
+total decimal (18,2) not null
 primary key (idServiceOrder)
 );
 
@@ -109,35 +110,35 @@ insert into ProductCategory (productCategoryDescription) values ('Appetizer/Star
 insert into ProductCategory (productCategoryDescription) values ('Main course') --6
 insert into ProductCategory (productCategoryDescription) values ('Dessert') --7
 
-
-insert into Product (productDescription,idProductCategory,productStatus) values ('Papaya',1,1); --NaturalDrink
-insert into Product (productDescription,idProductCategory,productStatus) values ('Pineaple',1,1); --NaturalDrink
-insert into Product (productDescription,idProductCategory,productStatus) values ('Blackberry',1,1); --NaturalDrink
-insert into Product (productDescription,idProductCategory,productStatus) values ('Fruits',1,1); --NaturalDrink
-insert into Product (productDescription,idProductCategory,productStatus) values ('Bear',2,1); --Liqueur
-insert into Product (productDescription,idProductCategory,productStatus) values ('whiskey',2,1); --Liqueur
-insert into Product (productDescription,idProductCategory,productStatus) values ('Tequila',2,1); --Liqueur
-insert into Product (productDescription,idProductCategory,productStatus) values ('Smirnoff',2,1); --Liqueur
-insert into Product (productDescription,idProductCategory,productStatus) values ('Coca-Cola',3,1); --Soft drink
-insert into Product (productDescription,idProductCategory,productStatus) values ('7Up',3,1); --Soft drink
-insert into Product (productDescription,idProductCategory,productStatus) values ('Evervess',3,1); --Soft drink
-insert into Product (productDescription,idProductCategory,productStatus) values ('Pepsi',3,1); --Soft drink
-insert into Product (productDescription,idProductCategory,productStatus) values ('Green Smoothie',4,1); --Smoothies
-insert into Product (productDescription,idProductCategory,productStatus) values ('Energy Smoothie',4,1); --Smoothies
-insert into Product (productDescription,idProductCategory,productStatus) values ('Muscle Smoothie',4,1); --Smoothies
-insert into Product (productDescription,idProductCategory,productStatus) values ('Weight Control Smoothie',4,1); --Smoothies
-insert into Product (productDescription,idProductCategory,productStatus) values ('Patacones',5,1); --Appetizer
-insert into Product (productDescription,idProductCategory,productStatus) values ('Fried Cheese Cubes',5,1); --Appetizer
-insert into Product (productDescription,idProductCategory,productStatus) values ('Chicken Nuggets',5,1); --Appetizer
-insert into Product (productDescription,idProductCategory,productStatus) values ('Ceviche',5,1); --Appetizer
-insert into Product (productDescription,idProductCategory,productStatus) values ('Olla de carne',6,1); --Main course
-insert into Product (productDescription,idProductCategory,productStatus) values ('Casado',6,1); --Main course
-insert into Product (productDescription,idProductCategory,productStatus) values ('Chicken Fajitas',6,1); --Main course
-insert into Product (productDescription,idProductCategory,productStatus) values ('Beef fajitas',6,1); --Main course
-insert into Product (productDescription,idProductCategory,productStatus) values ('Rice pudding',7,1); --Dessert
-insert into Product (productDescription,idProductCategory,productStatus) values ('Icre Cream',7,1); --Dessert
-insert into Product (productDescription,idProductCategory,productStatus) values ('Fuid Salad',7,1); --Dessert
-insert into Product (productDescription,idProductCategory,productStatus) values ('Flan',7,1); --Dessert
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Papaya',1,1,800); --NaturalDrink
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Pineaple',1,1,800); --NaturalDrink
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Pineaple',1,1,800); --NaturalDrink
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Blackberry',1,1,800); --NaturalDrink
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Fruits',1,1,800); --NaturalDrink
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Bear',2,1,1200); --Liqueur
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('whiskey',2,1,1500); --Liqueur
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Tequila',2,1,1500); --Liqueur
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Smirnoff',2,1,1200); --Liqueur
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Coca-Cola',3,1,1100); --Soft drink
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('7Up',3,1,1100); --Soft drink
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Evervess',3,1,1100); --Soft drink
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Pepsi',3,1,1100); --Soft drink
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Green Smoothie',4,1,1300); --Smoothies
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Energy Smoothie',4,1,1300); --Smoothies
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Muscle Smoothie',4,1,1300); --Smoothies
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Weight Control Smoothie',4,1,1300); --Smoothies
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Patacones',5,1,1800); --Appetizer
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Fried Cheese Cubes',5,1,1800); --Appetizer
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Chicken Nuggets',5,1,1800); --Appetizer
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Ceviche',5,1,2000); --Appetizer
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Olla de carne',6,1,2500); --Main course
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Casado',6,1,2200); --Main course
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Chicken Fajitas',6,1,2200); --Main course
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Beef fajitas',6,1,2800); --Main course
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Rice pudding',7,1,1500); --Dessert
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Icre Cream',7,1,1000); --Dessert
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Fuid Salad',7,1,1000); --Dessert
+insert into Product (productDescription,idProductCategory,productStatus,productPrice) values ('Flan',7,1,1000); --Dessert
 
 insert into ServiceOrderStatus (ServiceOrderDescription) values ('Registered'); 
 insert into ServiceOrderStatus (ServiceOrderDescription) values ('In process'); 
@@ -145,11 +146,11 @@ insert into ServiceOrderStatus (ServiceOrderDescription) values ('Pending');
 insert into ServiceOrderStatus (ServiceOrderDescription) values ('Delivered'); 
 insert into ServiceOrderStatus (ServiceOrderDescription) values ('Finished');
 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 1); 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 2); 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 3); 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 4); 
-insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 5);
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 1, 3200); 
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 2, 1600); 
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 3, 2000); 
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 4, 2000); 
+insert into ServiceOrder (idUserLogin, idTableNumber) values ('manager', 5, 2000);
 
 insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (1, 1, 'This is a test'); 
 insert into ServiceOrderDetails (idServiceOrder, idProduct, serviceOrderNotes) values (1, 2, 'This is a test'); 

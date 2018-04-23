@@ -13,8 +13,6 @@ namespace POS_UI.UIManager
     public partial class RegistrarCommanda : System.Web.UI.Page
     {
         IServiceOrder ISOGV;
-        IServiceOrderDetails ISODetailsGV;
-        IServiceOrderStatus ISOStatus;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -47,6 +45,12 @@ namespace POS_UI.UIManager
             ServiceOrder auxSO = ISOGV.SearchServiceOrder(SOid);
 
             this.txtIdServiceOrder.Text = auxSO.IdServiceOrder.ToString();
+        }
+
+        protected void btnDetails_Click(object sender, EventArgs e)
+        {
+            int SOid = Convert.ToInt32(this.dgvServiceOrder.SelectedDataKey.Value.ToString());
+            Response.Redirect("DetailServiceOrder.aspx?idServiceOrder=" + SOid);
         }
     }
 }

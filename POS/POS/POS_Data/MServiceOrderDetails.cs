@@ -20,9 +20,9 @@ namespace POS_Data
             _conexion = new OrmLiteConnectionFactory(DBAccess.Default.connection, SqlServerDialect.Provider);
             _db = _conexion.Open();
         }
-        public List<ServiceOrderDetails> ListServiceOrderDetails()
+        public List<ServiceOrderDetails> ListServiceOrderDetails(int idServiceOrder)
         {
-            return _db.Select<ServiceOrderDetails>();
+            return _db.Select<ServiceOrderDetails>(x => x.IdServiceOrder == idServiceOrder);
         }
 
         public ServiceOrderDetails SearchServiceOrderDetails(int idServiceOrderDetails)

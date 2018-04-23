@@ -12,18 +12,20 @@ namespace POS_Entitiy
         String idUserLogin;
         int idTableNumber;
         int idServiceOrderStatus;
+        decimal total;
 
         public ServiceOrder()
         {
 
         }
 
-        public ServiceOrder(int idServiceOrder, string idUserLogin, int idTableNumber, int idServiceOrderStatus)
+        public ServiceOrder(int idServiceOrder, string idUserLogin, int idTableNumber, int idServiceOrderStatus, decimal total)
         {
             this.IdServiceOrder = idServiceOrder;
             this.IdUserLogin = idUserLogin;
             this.IdTableNumber = idTableNumber;
             this.IdServiceOrderStatus = idServiceOrderStatus;
+            this.Total = total;
         }
 
         public int IdServiceOrder
@@ -75,6 +77,19 @@ namespace POS_Entitiy
             set
             {
                 idServiceOrderStatus = value;
+            }
+        }
+
+        public decimal Total
+        {
+            get
+            {
+                return total;
+            }
+
+            set
+            {
+                total = value;
             }
         }
     }

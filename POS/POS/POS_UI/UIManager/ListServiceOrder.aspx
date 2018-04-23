@@ -9,7 +9,7 @@
                 Seected Service Order: <asp:TextBox ID="txtIdServiceOrder" CssClass="form-control" runat="server" Enabled="False"></asp:TextBox>
             </div>
             <div class="col-md-4 mb-3 pt-4"> 
-                <asp:Button ID="btnDetails" CssClass="btn btn-primary mr-2" runat="server" Text="Details" />
+                <asp:Button ID="btnDetails" CssClass="btn btn-primary mr-2" runat="server" Text="Details" OnClick="btnDetails_Click" />
                 <asp:Button ID="btnAdd" CssClass="btn btn-success mr-2" runat="server" Text="Add" />
             </div>
 

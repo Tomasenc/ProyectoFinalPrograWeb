@@ -9,7 +9,7 @@ namespace POS_BL
 {
     public interface IServiceOrderDetails
     {
-        List<ServiceOrderDetails> ListServiceOrderDetails();
+        List<ServiceOrderDetails> ListServiceOrderDetails(int idServiceOrder);
         ServiceOrderDetails SearchServiceOrderDetails(int idServiceOrderDetails);
         void InsertServiceOrderDetails(ServiceOrderDetails ServiceOrderDetails);
         void UpdateServiceOrderDetails(ServiceOrderDetails ServiceOrderDetails);
