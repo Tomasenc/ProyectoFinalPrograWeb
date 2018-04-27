@@ -40,9 +40,9 @@ namespace POS_Data
             _db.Update(serviceOrderStatus);
         }
 
-        public void DeleteServiceOrderDetails(int idServiceOrderDetails)
+        public void DeleteServiceOrderDetails(int idServiceOrderDetails, int idProduct)
         {
-            _db.Delete<ServiceOrderDetails>(x => x.IdServiceOrderDetails == idServiceOrderDetails);
+            _db.ExecuteSql("delete from ServiceOrderDetails where idProduct=" + idServiceOrderDetails + " and idServiceOrder=" + idProduct);
         }
     }
 }

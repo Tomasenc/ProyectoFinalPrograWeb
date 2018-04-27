@@ -49,8 +49,12 @@ namespace POS_UI.UIManager
 
         protected void btnDetails_Click(object sender, EventArgs e)
         {
-            int SOid = Convert.ToInt32(this.txtIdServiceOrder.Text);
-            Response.Redirect("DetailServiceOrder.aspx?idServiceOrder=" + SOid);
+            if (this.txtIdServiceOrder.Text!="")
+            {
+                int SOid = Convert.ToInt32(this.txtIdServiceOrder.Text);
+                Response.Redirect("DetailServiceOrder.aspx?idServiceOrder=" + SOid);
+            }
+            
         }
     }
 }

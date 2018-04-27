@@ -24,21 +24,16 @@
                 <li class="nav-item "> <a class="nav-link" href="AddTables.aspx">Tables </a> </li>
                 <li class="nav-item"> <a class="nav-link" href="AddProducts.aspx">Product</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="ListServiceOrder.aspx">Service Order</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="ManageUsers.aspx">Users</a> </li>
             </ul>
             <div class="right form-group row">
                 <ul class="nav navbar-nav navbar-dark bg-dark">
-                    <li>
-                        <asp:Label ID="lblUserName" runat="server" CssClass="navbar-brand mr-2" Text="Label" ></asp:Label>
-                    </li>
-                    <li>
-                        <asp:Button ID="btnLogOut" runat="server" CssClass="btn btn-outline-secondary mr-2"  Text="Log out" OnClick="btnLogOut_Click"/>
-                    </li>
+                    <li> <asp:Label ID="lblUserName" runat="server" CssClass="navbar-brand mr-2" Text="Label" ></asp:Label> </li>
+                    <li> <asp:Button ID="btnLogOut" runat="server" CssClass="btn btn-outline-secondary mr-2"  Text="Log out" OnClick="btnLogOut_Click"/> </li>
                 </ul>
             </div>
-
         </div>
     </nav>
-    
     <div>
         
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

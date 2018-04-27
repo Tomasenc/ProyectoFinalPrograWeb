@@ -21,7 +21,9 @@ namespace POS_Entitiy
             this.lastName = lastName;
             this.userType = userType;
         }
-
+        public UserLogin()
+        {
+        }
         public string Username
         {
             get

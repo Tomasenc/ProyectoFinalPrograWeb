@@ -13,6 +13,6 @@ namespace POS_BL
         ServiceOrderDetails SearchServiceOrderDetails(int idServiceOrderDetails);
         void InsertServiceOrderDetails(ServiceOrderDetails ServiceOrderDetails);
         void UpdateServiceOrderDetails(ServiceOrderDetails ServiceOrderDetails);
-        void DeleteServiceOrderDetails(int idServiceOrderDetails);
+        void DeleteServiceOrderDetails(int idServiceOrderDetails, int idProduct);
     }
 }
